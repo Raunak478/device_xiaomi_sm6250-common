@@ -772,3 +772,9 @@ on property:ro.vendor.miui.region=*
 on property:sys.boot_completed=1
 chown system graphics /sys/class/drm/card0/sde-crtc-0/measured_fps
 chmod 0666 /sys/class/drm/card0/sde-crtc-0/measured_fps
+
+# Hide Magisk
+on property:sys.boot_completed=1
+    # Restrict permissions to socket file
+    # to hide Magisk & co.
+    chmod 440 /proc/net/unix
