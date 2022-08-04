@@ -779,5 +779,5 @@ on property:ro.vendor.miui.region=*
 
 # FPS Info
 on property:sys.boot_completed=1
-chown system graphics /sys/kernel/debug/dri/0/crtc97/fps
-chmod 0666 /sys/kernel/debug/dri/0/crtc97/fps
+chown system graphics /sys/class/drm/card0/sde-crtc-0/measured_fps
+chmod 0666 /sys/class/drm/card0/sde-crtc-0/measured_fps
